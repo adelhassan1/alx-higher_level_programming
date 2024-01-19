@@ -2,7 +2,7 @@
 
 if __name__ == "__main__":
     """do some Maths"""
-    from calvulator_1 import add, sub, mul, div
+    from calculator_1 import add, sub, mul, div
 
     a = 10
     b = 5

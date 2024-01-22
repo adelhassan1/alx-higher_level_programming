@@ -2,6 +2,15 @@
 #include <object.h>
 #include <listobject.h>
 
+/**
+ * print_python_list_info - Create a C function that
+ * prints some basic info about Python lists.
+ *
+ * @p: pointer to python list.
+ *
+ * Return: python list info.
+*/
+
 void print_python_list_info(PyObject *p)
 {
 	long int size = pylist_size(p);

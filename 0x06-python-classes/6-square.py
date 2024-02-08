@@ -11,8 +11,8 @@ class Square:
         Args:
             size: size of square.
             position: position of square"""
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     def area(self):
         """return square area"""
@@ -54,7 +54,6 @@ class Square:
         """prints in stdout the square with the character #"""
         if self.__size == 0:
             print()
-            return
         for i in range(self.__position[1]):
             print()
         for i in range(self.__size):

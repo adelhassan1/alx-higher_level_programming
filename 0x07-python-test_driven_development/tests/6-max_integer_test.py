@@ -17,6 +17,10 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([-1, 4, -9]), 4)
         self.assertEqual(max_integer([]), None)
         self.assertEqual(max_integer({0: 'a', 1: 'z', 2: 'c'}), 'z')
+        A = 54
+        self.assertEqual(max_integer([1, 2, A]), A)
+        self.assertEqual(max_integer([1]), 1)
+        self.assertEqual(max_integer(['Adel', 'image', 'zero']), 'zero')
 
     def test_types(self):
         """Make sure type errors are raised"""

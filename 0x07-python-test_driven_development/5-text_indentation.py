@@ -3,6 +3,7 @@
 printing text
 """
 
+
 def text_indentation(text):
     """function that prints a text with 2 new lines
     after each of these characters: ., ? and :"""
@@ -10,7 +11,8 @@ def text_indentation(text):
         raise TypeError("text must be a string")
     for i in range(len(text)):
         if text[i] == " ":
-            if text[i - 1] == "." or text[i - 1] == "?" or text[i - 1] == ":" or text[i - 1] == " ":
+            if text[i - 1] == "." or text[i - 1] == "?" or \
+                    text[i - 1] == ":" or text[i - 1] == " ":
                 continue
         print(text[i], end='')
         if text[i] == "." or text[i] == "?" or text[i] == ":":

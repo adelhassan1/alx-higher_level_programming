@@ -1,0 +1,51 @@
+The ``Naming`` module
+=====================
+
+
+	>>> my_name = __import__("3-say_my_name")
+
+
+Tests:
+
+	>>> print(len((my_name.__doc__).splitlines()))
+	2
+
+
+	>>> print(len((my_name.say_my_name.__doc__).splitlines()))
+	1
+
+
+	>>> my_name.say_my_name("John", "Smith")
+	My name is John Smith
+
+
+	>>> my_name.say_my_name("Walter", "White")
+	My name is Walter White
+
+
+	>>> my_name.say_my_name("Bob")
+	My name is Bob 
+
+
+	>>> my_name.say_my_name(12, "White")
+	Traceback (most recent call last):
+		...
+	TypeError: first_name must be a string
+
+
+	>>> my_name.say_my_name("Adel", 12)
+	Traceback (most recent call last):
+		...
+	TypeError: last_name must be a string
+
+
+	>>> my_name.say_my_name(None, "Adel")
+	Traceback (most recent call last):
+		...
+	TypeError: first_name must be a string
+
+
+	>>> my_name.say_my_name(None)
+	Traceback (most recent call last):
+		...
+	TypeError: first_name must be a string

@@ -1,0 +1,35 @@
+The ``Addition`` module
+===================
+
+	>>> module = __import__("0-add_integer")
+
+	
+Now let's do some tests:
+
+	>>> print(module.add_integer(1, 2))
+	3
+
+	>>> print(module.add_integer(100, -2))
+	98
+
+	>>> print(module.add_integer(2))
+	100
+
+	>>> print(module.add_integer(100.3, -2))
+	98
+
+	>>> print(module.add_integer(4, "School"))
+	Traceback (most recent call last):
+		...
+	TypeError: b must be an integer
+
+	>>> print(module.add_integer(None))
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+	>>> print(len((module.__doc__).splitlines()))
+	5
+
+	>>> print(len((module.add_integer.__doc__).splitlines()))
+	3

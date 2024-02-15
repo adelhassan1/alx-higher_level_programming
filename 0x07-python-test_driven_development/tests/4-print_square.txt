@@ -1,0 +1,46 @@
+The ``Square`` module
+=====================
+
+
+	>>> square = __import__("4-print_square")
+
+Tests:
+
+	>>> print(len((square.__doc__).splitlines()))
+	2
+
+
+	>>> print(len((square.print_square.__doc__).splitlines()))
+	1
+
+
+	>>> square.print_square(4)
+	####
+	####
+	####
+	####
+
+
+	>>> square.print_square(0)
+
+
+	>>> square.print_square(1)
+	#
+
+
+	>>> square.print_square(-1)
+	Traceback (most recent call last):
+		...
+	ValueError: size must be >= 0
+
+
+	>>> square.print_square("School")
+	Traceback (most recent call last):
+		...
+	TypeError: size must be an integer
+
+
+	>>> square.print_square(4.2)
+	Traceback (most recent call last):
+		...
+	TypeError: size must be an integer

@@ -21,3 +21,5 @@ class TestMaxInteger(unittest.TestCase):
         self.assertRaises(TypeError, max_integer, [1, 2, [1, 5]])
         self.assertRaises(TypeError, max_integer, [1, 2, 5+3j])
         self.assertRaises(TypeError, max_integer, None)
+        self.assertRaises(TypeError, max_integer, True)
+        self.assertRaises(TypeError, max_integer, -3)

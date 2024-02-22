@@ -12,7 +12,7 @@ num = len(sys.argv)
 
 try:
     mylist = load_from_json_file('add_item.json')
-except TypeError:
+except:
     mylist = []
 
 for i in range(1, num):

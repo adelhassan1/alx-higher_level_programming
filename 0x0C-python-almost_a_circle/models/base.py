@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """class Base"""
 import json
+import csv
 
 
 class Base:
@@ -85,3 +86,43 @@ class Base:
             return ([cls.create(**x) for x in my_list])
         except FileNotFoundError:
             return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """serializes in CSV
+        Args
+            cls - class
+            list_objs - list of objects
+        """
+        filename = '{}.csv'.format(cls.__name__)
+        if cls.__name__ == 'Rectangle':
+            names = ['id', 'width', 'height', 'x', 'y']
+        else:
+            names = ['id', 'size', 'x', 'y']
+
+        with open(filename, 'w', newline='') as f:
+            if list_objs:
+                writer = csv.DictWriter(f, fieldnames=names)
+                writer.writeheader()
+                for x in list_objs:
+                    writer.writerow(x.to_dictionary())
+            else:
+                writer.writerow([[]])
+
+    def load_from_file_csv(cls):
+        """deserializes in CSV
+        Args
+            cls
+        """
+        my_list = []
+        filename = '{}.csv'.format(cls.__name__)
+        try:
+            with open(filename, 'r') as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    for key, val in row.items():
+                        row[key] = int(val)
+                    my_list.append(row)
+            return([cls.create(**x) for x in my_list])
+        except FileNotFoundError:
+            return([[]])

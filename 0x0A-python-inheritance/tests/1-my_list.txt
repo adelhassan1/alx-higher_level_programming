@@ -8,15 +8,21 @@
 [1, 2, 4, 3]
 >>> my_list.print_sorted()
 [1, 2, 3, 4]
-
->>> my_list.append(-3)
->>> my_list.append(-4)
->>> my_list.print_sorted()
-[-4, -3, 1, 2, 3, 4]
->>> my_list.clear()
->>> my_list.print_sorted()
-[]
+>>> print(my_list)
+[1, 2, 4, 3]
 
 >>> my_list2 = MyList()
+>>> print(my_list2)
+[]
 >>> my_list2.print_sorted()
 []
+
+>>> my_list = MyList()
+>>> my_list.append(-2)
+>>> my_list.append(-40)
+>>> my_list.append(10)
+>>> my_list.append(-521)
+>>> print(my_list)
+[-2, -40, 10, -521]
+>>> my_list.print_sorted()
+[-521, -40, -2, 10]

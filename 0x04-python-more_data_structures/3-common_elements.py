@@ -5,4 +5,3 @@ def common_elements(set_1, set_2):
         if x in set_2:
             common_in_set.append(x)
     return common_in_set
-

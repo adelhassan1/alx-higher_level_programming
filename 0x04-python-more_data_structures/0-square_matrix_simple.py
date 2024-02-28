@@ -8,4 +8,3 @@ def square_matrix_simple(matrix=[]):
         total_matrics.append(new_row)
         new_row = []
     return total_matrics
-

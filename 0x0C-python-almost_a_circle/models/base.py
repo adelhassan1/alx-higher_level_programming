@@ -109,6 +109,7 @@ class Base:
             else:
                 writer.writerow([[]])
 
+    @classmethod
     def load_from_file_csv(cls):
         """deserializes in CSV
         Args

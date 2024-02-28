@@ -16,3 +16,7 @@
 >>> my_list.clear()
 >>> my_list.print_sorted()
 []
+
+my_list2 = MyList()
+>>> my_list2.print_sorted()
+[]

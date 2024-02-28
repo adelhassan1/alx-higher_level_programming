@@ -53,7 +53,7 @@ class Base:
             json_string - represnts a list of dict
         """
         if not json_string:
-            return '[]'
+            return []
         else:
             return json.loads(json_string)
 

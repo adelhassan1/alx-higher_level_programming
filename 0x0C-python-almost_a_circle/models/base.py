@@ -123,6 +123,6 @@ class Base:
                     for key, val in row.items():
                         row[key] = int(val)
                     my_list.append(row)
-            return([cls.create(**x) for x in my_list])
+            return ([cls.create(**x) for x in my_list])
         except FileNotFoundError:
-            return([[]])
+            return ([[]])
